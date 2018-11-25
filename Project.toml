@@ -1,0 +1,7 @@
+authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
+name = "Sexagesimal"
+uuid = "c7ae8f22-f0e3-11e8-1168-3fc928072714"
+version = "0.0.1"
+
+[deps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
