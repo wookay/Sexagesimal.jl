@@ -11,8 +11,7 @@ export 甲子, 乙丑, 丙寅, 丁卯, 戊辰, 己巳, 庚午, 辛未, 壬申, �
 @enum 天干 甲=1 乙 丙 丁 戊 己 庚 辛 壬 癸
 @enum 地支 子=1 丑 寅 卯 辰 巳 午 未 申 酉 戌 亥
 
-六十字 = [Symbol(天, 地) for (天, 地) in zip(repeat(collect(instances(天干)), 6),
-                                             repeat(collect(instances(地支)), 5))]
+六十字 = [Symbol(天干(H), 地支(E)) for (H, E) in zip(repeat(1:10, 6), repeat(1:12, 5))]
 eval(quote
     @enum 六十甲子 甲子=1 $(六十字[2:end]...)
 end)
@@ -22,7 +21,7 @@ function Base.:+(數::六十甲子, n::Int)
 end
 
 function Base.:-(數::六十甲子, n::Int)
-    x = Int(數) - n
+    x = (Int(數) - n) % 60
     六十甲子(x > 0 ? x : x+60)
 end
 

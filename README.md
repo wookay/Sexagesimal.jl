@@ -6,15 +6,22 @@
 
 
 ```julia
-using Sexagesimal.干支
-using Test
+julia> using Sexagesimal.干支
 
-@test 甲子 isa 六十甲子
-@test 甲子 + 1 == 乙丑
-@test 癸亥 + 1 == 甲子
-@test 癸亥 + 2 == 乙丑
-@test 壬戌 + 2 == 甲子
-@test 甲子 - 2 == 壬戌
+julia> 甲子
+甲子::六十甲子 = 1
+
+julia> 甲子 + 1
+乙丑::六十甲子 = 2
+
+julia> 甲子 - 1
+癸亥::六十甲子 = 60
+
+julia> Int(甲子)
+1
+
+julia> Symbol(甲子)
+:甲子
 ```
 
 
