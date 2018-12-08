@@ -1,8 +1,8 @@
 # Sexagesimal ♒️
 
-|  **Build Status**               |
-|:-------------------------------:|
-|  [![][travis-img]][travis-url]  |
+|  **Build Status**                                               |
+|:---------------------------------------------------------------:|
+|  [![][travis-img]][travis-url]  [![][codecov-img]][codecov-url] |
 
 
 ```julia
@@ -27,3 +27,6 @@ julia> Symbol(甲子)
 
 [travis-img]: https://api.travis-ci.org/wookay/Sexagesimal.jl.svg?branch=master
 [travis-url]: https://travis-ci.org/wookay/Sexagesimal.jl
+
+[codecov-img]: https://codecov.io/gh/wookay/Sexagesimal.jl/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/wookay/Sexagesimal.jl/branch/master
