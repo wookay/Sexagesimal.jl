@@ -3,8 +3,13 @@ name = "Sexagesimal"
 uuid = "c7ae8f22-f0e3-11e8-1168-3fc928072714"
 version = "0.0.1"
 
+[compat]
+julia = "1.6"
+Jive = "0.3"
+
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+Jive = "ba5e3d4b-8524-549f-bc71-e76ad9e9deed"
 
 [targets]
-test = ["Test"]
+test = ["Test", "Jive"]

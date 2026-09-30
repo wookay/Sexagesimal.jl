@@ -1,9 +1,8 @@
-# Sexagesimal ♒️
+# Sexagesimal.jl ♒️
 
-|  **Build Status**                                               |
-|:---------------------------------------------------------------:|
-|  [![][travis-img]][travis-url]  [![][codecov-img]][codecov-url] |
-
+|  **Build Status**                 |
+|:---------------------------------:|
+|  [![][actions-img]][actions-url]  |
 
 ```julia
 julia> using Sexagesimal.干支
@@ -24,9 +23,10 @@ julia> Symbol(甲子)
 :甲子
 ```
 
+### repositories
+ - Hexagrams.jl ☯  https://github.com/wookay/Hexagrams.jl
+ - Sexagesimal.jl ♒️  https://github.com/wookay/Sexagesimal.jl
 
-[travis-img]: https://api.travis-ci.org/wookay/Sexagesimal.jl.svg?branch=master
-[travis-url]: https://travis-ci.org/wookay/Sexagesimal.jl
 
-[codecov-img]: https://codecov.io/gh/wookay/Sexagesimal.jl/branch/master/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/wookay/Sexagesimal.jl/branch/master
+[actions-img]: https://github.com/wookay/Sexagesimal.jl/workflows/CI/badge.svg
+[actions-url]: https://github.com/wookay/Sexagesimal.jl/actions

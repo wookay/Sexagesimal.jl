@@ -1,7 +1,7 @@
 module test_sexagesimal_干支
 
-using Sexagesimal.干支
 using Test
+using Sexagesimal.干支
 
 @test 甲子 isa 六十甲子
 @test 甲子 + 1 == 乙丑
