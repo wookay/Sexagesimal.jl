@@ -24,7 +24,7 @@ eval(quote
     @enum 六十甲子 甲子=1 $(六十字[2:end]...)
 end)
 
-function Base.:+(數::六十甲子, n::Int)
+function Base.:+(數::六十甲子, n::Int)::六十甲子
     x = (Int(數) + n) % 60
     if iszero(x)
         癸亥
@@ -33,16 +33,15 @@ function Base.:+(數::六十甲子, n::Int)
     end
 end
 
-function Base.:-(數::六十甲子, n::Int)
-    x = (Int(數) - n) % 60
-    六十甲子(x > 0 ? x : x+60)
+function Base.:-(數::六十甲子, n::Int)::六十甲子
+    +(數, 60 - n % 60)
 end
 
 function 六十(H::天干, E::地支)::Union{六十甲子, Nothing}
     if isodd(Int(H))
         iseven(Int(E)) && return nothing
-    else
-        isodd(Int(E)) && return nothing
+    elseif isodd(Int(E))
+        return nothing
     end
     getfield(@__MODULE__, Symbol(H, E))
 end
